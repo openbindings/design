@@ -1,7 +1,7 @@
 {
   "format": "openbindings.design-loop@1",
   "updated": "2026-08-07",
-  "activeSlice": "machine-material",
+  "activeSlice": "foundations",
   "consumers": {
     "web": {
       "repository": "openbindings/web",
@@ -73,8 +73,8 @@
     },
     "foundations": {
       "title": "Typography, density, shape, focus, and motion",
-      "status": "queued",
-      "record": null,
+      "status": "inventory",
+      "record": "docs/slices/foundations.md",
       "evidence": [
         "docs/evidence/2026-08-07-common-ground.md"
       ],
@@ -89,11 +89,12 @@
     },
     "machine-material": {
       "title": "Machine material and syntax",
-      "status": "canonical",
+      "status": "verified",
       "record": "docs/slices/machine-material.md",
       "evidence": [
         "docs/evidence/2026-08-07-common-ground.md",
-        "docs/evidence/2026-08-07-machine-material-inventory.md"
+        "docs/evidence/2026-08-07-machine-material-inventory.md",
+        "docs/evidence/2026-08-07-machine-material-adoption.md"
       ],
       "canonical": [
         "tokens/machine-material.json",
@@ -104,9 +105,9 @@
         "specimens/machine-material.html"
       ],
       "adoption": {
-        "web": "observed",
-        "elements": "observed",
-        "workbench": "observed",
+        "web": "adopted",
+        "elements": "adopted",
+        "workbench": "adopted",
         "oauth": "out_of_scope",
         "cli": "adopted"
       }
