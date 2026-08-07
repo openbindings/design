@@ -15,10 +15,12 @@ const required = [
   "docs/evidence/2026-08-07-machine-material-inventory.md",
   "docs/evidence/2026-08-07-machine-material-adoption.md",
   "docs/evidence/2026-08-07-foundations-inventory.md",
+  "docs/evidence/2026-08-07-foundations-adoption.md",
   "docs/decisions/0001-independent-repository.md",
   "docs/decisions/0002-canonical-glyph.md",
   "docs/slices/color-theme.md",
   "docs/slices/foundations.md",
+  "docs/slices/status-feedback.md",
   "docs/slices/identity.md",
   "docs/slices/machine-material.md",
   "docs/templates/design-slice.md",
@@ -111,6 +113,9 @@ for (const [key, slice] of Object.entries(designLoop.slices)) {
   }
   if (slice.record) {
     await access(new URL(`../${slice.record}`, import.meta.url));
+  }
+  if (slice.status === "verified" && (slice.canonical?.length ?? 0) === 0) {
+    throw new Error(`${key}: verified slice must retain canonical outputs`);
   }
   for (const evidencePath of slice.evidence ?? []) {
     await access(new URL(`../${evidencePath}`, import.meta.url));

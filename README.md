@@ -7,10 +7,11 @@ pages, and project assets can feel like parts of one system without forcing
 those surfaces into one implementation.
 
 **Status: active.** The repository boundary and ownership model are established,
-and the identity system, official color theme, and machine-material system are
-stable and adopted. Broader brand guidance and public packages are still being
-reviewed through focused design slices. Existing consumer files remain
-authoritative until an explicit migration lands.
+and the identity, official color theme, interface foundations, and
+machine-material systems are stable and adopted. Broader brand guidance and
+public packages are still being reviewed through focused design slices.
+Existing consumer files remain authoritative until an explicit migration
+lands.
 
 This work is tooling and product guidance. It is not part of the OpenBindings
 specification and creates no conformance requirement for third-party
@@ -83,9 +84,10 @@ The full state machine is in [docs/development-loop.md](docs/development-loop.md
 state, and the initial evidence is in
 [docs/evidence/2026-08-07-common-ground.md](docs/evidence/2026-08-07-common-ground.md).
 The completed slices are [identity and canonical assets](docs/slices/identity.md),
-[color roles and the official theme](docs/slices/color-theme.md), and
+[color roles and the official theme](docs/slices/color-theme.md),
+[interface foundations](docs/slices/foundations.md), and
 [machine material and syntax](docs/slices/machine-material.md). The active
-slice is [interface foundations](docs/slices/foundations.md).
+slice is [status, feedback, and recovery](docs/slices/status-feedback.md).
 
 The Design repository remains canonical even if openbindings.com later renders
 this material as a browsable design-system site. Presentation may be delegated;

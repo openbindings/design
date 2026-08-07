@@ -1,7 +1,7 @@
 {
   "format": "openbindings.design-loop@1",
   "updated": "2026-08-07",
-  "activeSlice": "foundations",
+  "activeSlice": "status-feedback",
   "consumers": {
     "web": {
       "repository": "openbindings/web",
@@ -73,11 +73,12 @@
     },
     "foundations": {
       "title": "Typography, density, shape, focus, and motion",
-      "status": "proposal",
+      "status": "verified",
       "record": "docs/slices/foundations.md",
       "evidence": [
         "docs/evidence/2026-08-07-common-ground.md",
-        "docs/evidence/2026-08-07-foundations-inventory.md"
+        "docs/evidence/2026-08-07-foundations-inventory.md",
+        "docs/evidence/2026-08-07-foundations-adoption.md"
       ],
       "canonical": [
         "tokens/foundations.json",
@@ -85,13 +86,12 @@
         "experience/foundations.md",
         "specimens/foundations.html"
       ],
-      "canonical": [],
       "adoption": {
-        "web": "observed",
-        "elements": "observed",
-        "workbench": "observed",
-        "oauth": "observed",
-        "cli": "not_started"
+        "web": "adopted",
+        "elements": "adopted",
+        "workbench": "adopted",
+        "oauth": "adopted",
+        "cli": "adopted"
       }
     },
     "machine-material": {
@@ -121,8 +121,8 @@
     },
     "status-feedback": {
       "title": "Status, feedback, and recovery",
-      "status": "queued",
-      "record": null,
+      "status": "inventory",
+      "record": "docs/slices/status-feedback.md",
       "evidence": [
         "docs/evidence/2026-08-07-common-ground.md"
       ],

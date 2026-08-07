@@ -1,6 +1,6 @@
 # Design slice: interface foundations
 
-Status: proposal
+Status: verified
 Tracker key: `foundations`
 Owner: OpenBindings maintainers
 
@@ -39,7 +39,7 @@ difference.
 | Motion | Transitions are short and mostly functional | Which motion roles are useful, and how must reduced-motion collapse them? |
 | Terminal structure | CLI uses whitespace, indentation, and native emphasis rather than CSS | Which foundation decisions have a meaningful terminal adaptation? |
 
-## Proposed model
+## Accepted model
 
 The proposal has two deliberately unequal tiers:
 
@@ -54,13 +54,24 @@ adaptations. They are illustrative, not style presets. In particular, the
 system defines neither a canonical wordmark nor a fixed glyph-and-name lockup;
 typography beside the glyph stays surface-owned.
 
-## Candidate sources
+## Stable outputs
 
 - [`tokens/foundations.json`](../../tokens/foundations.json)
 - [`tokens/generated/openbindings-foundations.css`](../../tokens/generated/openbindings-foundations.css)
 - [`experience/foundations.md`](../../experience/foundations.md)
 - [`specimens/foundations.html`](../../specimens/foundations.html)
 
-The proposal advances only after the specimen proves expressive latitude and
-consumer migrations close genuine behavioral gaps without normalizing
-intentional surface differences.
+## Consumer adoption
+
+| Consumer | Adoption | Pull request or commit | State |
+| --- | --- | --- | --- |
+| Web | Optional type, radius, and tempo references mapped into existing local aliases; editorial profile retained | [web#17](https://github.com/openbindings/web/pull/17), `152ee02936921805672e0d731855bf53543df21c` | adopted |
+| Elements | Neutral public tokens retained; standalone reduced-motion behavior added | [elements#6](https://github.com/openbindings/elements/pull/6), `e4b8f98dc25911016c1c8774c2c7028bc14f3e6c` | adopted |
+| Workbench | Dense application profile and zero-radius content planes explicitly retained | [elements#6](https://github.com/openbindings/elements/pull/6), `e4b8f98dc25911016c1c8774c2c7028bc14f3e6c` | adopted |
+| OAuth | Compact local composition retained; reduced-motion behavior added | [ob#36](https://github.com/openbindings/ob/pull/36), `9b6f1fa5b01813c62c1de4f0431203195ccf0ea5` | adopted |
+| CLI | Terminal-native profile recorded; no browser values imposed | [ob#36](https://github.com/openbindings/ob/pull/36), `9b6f1fa5b01813c62c1de4f0431203195ccf0ea5` | adopted |
+
+The full verification record, including preserved adaptations and the unrelated
+ob dependency-checksum CI condition, is in
+[the foundations adoption evidence](../evidence/2026-08-07-foundations-adoption.md).
+Final verification date: 2026-08-07.

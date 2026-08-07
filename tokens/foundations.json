@@ -2,7 +2,7 @@
   "format": "openbindings.foundations@1",
   "name": "openbindings-interface-foundations",
   "revision": 1,
-  "maturity": "candidate",
+  "maturity": "stable",
   "scope": "Official OpenBindings human-facing interfaces",
   "policy": {
     "requirements": {

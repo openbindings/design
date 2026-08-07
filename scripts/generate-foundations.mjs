@@ -9,8 +9,8 @@ const source = JSON.parse(await readFile(sourcePath, "utf8"));
 if (source.format !== "openbindings.foundations@1") {
   throw new Error("foundations must use openbindings.foundations@1");
 }
-if (source.maturity !== "candidate") {
-  throw new Error("foundations revision 1 must remain candidate until consumer proof is recorded");
+if (source.maturity !== "stable") {
+  throw new Error("foundations revision 1 must remain stable after consumer proof");
 }
 
 const requirements = source.policy?.requirements ?? {};

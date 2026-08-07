@@ -1,6 +1,6 @@
 # OpenBindings interface foundations
 
-Maturity: **candidate**  
+Maturity: **stable**
 Foundations revision: **1**
 
 OpenBindings surfaces should feel related without becoming replicas. These
@@ -112,4 +112,3 @@ A consumer adoption should be small and explain its boundary:
 
 The cross-surface inventory is in
 [`docs/evidence/2026-08-07-foundations-inventory.md`](../docs/evidence/2026-08-07-foundations-inventory.md).
-
