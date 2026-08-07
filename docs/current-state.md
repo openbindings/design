@@ -3,8 +3,10 @@
 Date: 2026-08-07. This is a factual starting inventory, not an adopted style
 guide.
 
-This snapshot predates the first consumer migrations. Use
-[`design-loop.json`](../design-loop.json) for current slice and adoption state.
+This snapshot predates the first consumer migrations. Identity revision 1 and
+theme revision 1 have since been adopted by every applicable official surface.
+Use [`design-loop.json`](../design-loop.json) for current slice and adoption
+state and the evidence records for exact consumer commits.
 
 ## Official surfaces
 

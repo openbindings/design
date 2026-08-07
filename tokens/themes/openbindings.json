@@ -2,7 +2,7 @@
   "format": "openbindings.theme@1",
   "name": "openbindings",
   "revision": 1,
-  "maturity": "candidate",
+  "maturity": "stable",
   "sourceRoles": "tokens/color.json",
   "schemes": {
     "light": {

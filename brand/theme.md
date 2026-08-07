@@ -1,6 +1,6 @@
 # Official OpenBindings color theme
 
-Maturity: **candidate**
+Maturity: **stable**
 Theme revision: **1**
 
 OpenBindings products use a restrained, technical, predominantly monochrome
@@ -58,8 +58,9 @@ maps theme roles into the existing contract:
 - syntax, focus geometry, radius, type, spacing, and shadows remain outside
   this adapter until their owning slices decide them.
 
-This mapping can be vendored while the theme is candidate. Do not publish a
-package or promise a public token compatibility policy from revision 1.
+This mapping can be vendored with its Design revision recorded. Stable means
+the official values passed consumer proof; it does not publish a package or
+promise a public token compatibility policy for revision 1.
 
 ## Theme selection
 
@@ -85,7 +86,7 @@ The generated CSS maps roles to system colors under
 - use `Highlight`/`HighlightText` for selection and focus input; and
 - treat subtle borders as absent when system colors collapse them.
 
-The candidate theme raises faint text and meaningful border contrast in its
+The stable theme raises faint text and meaningful border contrast in its
 ordinary schemes. A future `prefers-contrast` treatment may strengthen more
 roles, but must not wait on a separate palette to make essential UI legible.
 
@@ -109,6 +110,6 @@ The generator rejects a theme revision when:
   `4.5:1` in its required contexts; or
 - `borderStrong` is below `3:1` on the background.
 
-Consumer adoption also requires light, dark, forced-colors, and `NO_COLOR`
-evidence appropriate to that surface. The theme becomes stable only after all
-in-scope consumers adopt it or record a verified exception.
+Consumer adoption requires light, dark, forced-colors, and `NO_COLOR` evidence
+appropriate to that surface. The adoption record is in
+[`docs/evidence/2026-08-07-color-theme-adoption.md`](../docs/evidence/2026-08-07-color-theme-adoption.md).

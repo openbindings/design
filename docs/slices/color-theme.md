@@ -1,6 +1,6 @@
 # Design slice: color roles and official theme
 
-Status: canonical
+Status: verified
 Tracker key: `color-theme`
 Owner: OpenBindings maintainers
 
@@ -50,8 +50,8 @@ The generated cross-surface rendering is
 | Success, warning, and danger | Browser palettes and terminal styles use different literals | Modality adaptation | Shared meaning must survive native contrast and terminal capability limits |
 | Syntax colors | Similar roles use differing values | Deferred to `machine-material` | Syntax needs its own contrast and semantic review |
 
-These classifications are accepted for candidate revision 1. Consumer proof
-may send a role or value back to proposal without reopening unrelated roles.
+These classifications were accepted for revision 1 and confirmed through
+consumer adoption.
 
 ## Resolved questions
 
@@ -66,28 +66,32 @@ may send a role or value back to proposal without reopening unrelated roles.
    boundaries meet their contrast requirements in ordinary themes.
 4. Terminal roles map to ANSI meaning; `NO_COLOR` emits no styling escapes and
    leaves all textual meaning intact. Machine output is untouched.
-5. The source can ship as checked JSON plus generated CSS in Design while it is
-   candidate. No package or public compatibility promise is required yet.
+5. The source ships as checked JSON plus generated CSS in Design. Stable
+   revision 1 is an official-theme decision, not a package or public token
+   compatibility promise.
 
-## Candidate outputs
+## Stable outputs
 
 | Output | Intended Design path | Maturity |
 | --- | --- | --- |
-| Semantic color role model | `tokens/color.json` | candidate |
-| Official light and dark values | `tokens/themes/openbindings.json` | candidate |
-| Generated CSS and Elements adapter | `tokens/generated/openbindings-theme.css` | candidate |
-| Theme and modality guidance | `brand/theme.md` | candidate |
-| Cross-surface color specimen | `specimens/color-theme.html` | candidate |
+| Semantic color role model | `tokens/color.json` | stable |
+| Official light and dark values | `tokens/themes/openbindings.json` | stable |
+| Generated CSS and Elements adapter | `tokens/generated/openbindings-theme.css` | stable |
+| Theme and modality guidance | `brand/theme.md` | stable |
+| Cross-surface color specimen | `specimens/color-theme.html` | stable |
 
 ## Consumer adoption
 
 | Consumer | Mapping | Pull request or commit | Checks | State |
 | --- | --- | --- | --- | --- |
-| Web | Map official theme roles into local CSS | — | Pending | observed |
-| Elements | Preserve neutral defaults and document the official adapter seam | — | Pending | observed |
-| Workbench | Map application tokens into the Elements contract | — | Pending | observed |
-| OAuth | Map official roles into embedded page CSS | — | Pending | observed |
-| CLI | Map semantic roles to native terminal styles and no-color fallbacks | — | Pending | observed |
+| Web | Map official theme roles into local CSS | [web#15](https://github.com/openbindings/web/pull/15), `246169da4f3993b74a190c057704e20de5d2d7ae` | Local and hosted checks; light, dark, and forced-colors review | adopted |
+| Elements | Preserve neutral defaults and document the official adapter seam | [elements#4](https://github.com/openbindings/elements/pull/4), `eef4af8d35b6b57204233469525679b7e7b04a88` | 179 package tests, design check, neutral-boundary check | adopted |
+| Workbench | Map application tokens into the Elements contract | [elements#4](https://github.com/openbindings/elements/pull/4), `eef4af8d35b6b57204233469525679b7e7b04a88` | 20 browser tests passed, 7 skipped; light and dark review | adopted |
+| OAuth | Map official roles into embedded page CSS | [ob#35](https://github.com/openbindings/ob/pull/35), `9dbcffc92585f55f9472109afbb321b8987f46602` | Go tests; dark and forced-colors review | adopted |
+| CLI | Map semantic roles to native terminal styles and no-color fallbacks | [ob#35](https://github.com/openbindings/ob/pull/35), `9dbcffc92585f55f9472109afbb321b8987f46602` | ANSI role, `NO_COLOR`, JSON, and YAML tests | adopted |
+
+The complete verification and remote-CI record is in
+[the color-theme adoption evidence](../evidence/2026-08-07-color-theme-adoption.md).
 
 ## Exceptions and follow-ups
 
@@ -95,4 +99,4 @@ may send a role or value back to proposal without reopening unrelated roles.
   design; it is not an adoption exception. Official hosts apply the adapter.
 - Follow-up slices: machine-material owns syntax palettes; foundations owns
   focus geometry and typography.
-- Final verification date: pending.
+- Final verification date: 2026-08-07.
