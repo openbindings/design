@@ -6,9 +6,12 @@
   "license": "Apache-2.0",
   "repository": "github:openbindings/design",
   "scripts": {
-    "check": "node scripts/check.mjs && npm run check:assets",
+    "check": "node scripts/check.mjs && npm run check:assets && npm run check:theme",
     "check:assets": "node scripts/generate-assets.mjs --check",
-    "generate": "node scripts/generate-assets.mjs",
+    "check:theme": "node scripts/generate-theme.mjs --check",
+    "generate": "npm run generate:assets && npm run generate:theme",
+    "generate:assets": "node scripts/generate-assets.mjs",
+    "generate:theme": "node scripts/generate-theme.mjs",
     "loop": "node scripts/design-loop.mjs",
     "test": "npm run check"
   }

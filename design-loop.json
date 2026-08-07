@@ -50,12 +50,18 @@
     },
     "color-theme": {
       "title": "Color roles and official theme",
-      "status": "inventory",
+      "status": "canonical",
       "record": "docs/slices/color-theme.md",
       "evidence": [
-        "docs/evidence/2026-08-07-common-ground.md"
+        "docs/evidence/2026-08-07-common-ground.md",
+        "docs/evidence/2026-08-07-color-theme-inventory.md"
       ],
-      "canonical": [],
+      "canonical": [
+        "tokens/color.json",
+        "tokens/themes/openbindings.json",
+        "tokens/generated/openbindings-theme.css",
+        "brand/theme.md"
+      ],
       "adoption": {
         "web": "observed",
         "elements": "observed",

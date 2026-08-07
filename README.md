@@ -7,10 +7,11 @@ pages, and project assets can feel like parts of one system without forcing
 those surfaces into one implementation.
 
 **Status: active.** The repository boundary and ownership model are established,
-and the identity system is stable and adopted. Broader brand guidance, token
-values, and public packages are still being reviewed through focused design
-slices. Existing consumer files remain authoritative until an explicit
-migration lands.
+and the identity system is stable and adopted. The official color theme is a
+canonical candidate entering consumer migration. Broader brand guidance and
+public packages are still being reviewed through focused design slices.
+Existing consumer files remain authoritative until an explicit migration
+lands.
 
 This work is tooling and product guidance. It is not part of the OpenBindings
 specification and creates no conformance requirement for third-party
@@ -97,7 +98,12 @@ The repository currently has no runtime dependencies:
 ```sh
 npm test
 npm run loop
+npm run generate
 ```
+
+`npm run generate` refreshes committed identity and theme adapters from their
+canonical sources. `npm test` rejects stale generated files and inaccessible
+candidate color combinations.
 
 Changes use trunk plus tags. Work lands on `main`; future published design
 artifacts will version independently from the specification, SDKs, Elements,
