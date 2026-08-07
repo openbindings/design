@@ -1,6 +1,6 @@
 # Design slice: color roles and official theme
 
-Status: inventory
+Status: canonical
 Tracker key: `color-theme`
 Owner: OpenBindings maintainers
 
@@ -34,8 +34,10 @@ Owner: OpenBindings maintainers
 
 The source comparison begins with
 [the common-ground evidence](../evidence/2026-08-07-common-ground.md). Exact
-value extraction and rendered contrast evidence remain part of this inventory
-stage.
+values, theme behavior, and contrast findings are in
+[the color-theme inventory](../evidence/2026-08-07-color-theme-inventory.md).
+The generated cross-surface rendering is
+[`specimens/color-theme.html`](../../specimens/color-theme.html).
 
 ## Semantic comparison
 
@@ -48,28 +50,34 @@ stage.
 | Success, warning, and danger | Browser palettes and terminal styles use different literals | Modality adaptation | Shared meaning must survive native contrast and terminal capability limits |
 | Syntax colors | Similar roles use differing values | Deferred to `machine-material` | Syntax needs its own contrast and semantic review |
 
-Classifications remain hypotheses until proposal review.
+These classifications are accepted for candidate revision 1. Consumer proof
+may send a role or value back to proposal without reopening unrelated roles.
 
-## Inventory questions
+## Resolved questions
 
-1. Which semantic roles are truly shared, and which are only official-theme
-   aliases over the Elements contract?
-2. Should official surfaces use exact shared values or per-surface mappings
-   constrained by contrast and hierarchy?
-3. Which forced-color and high-contrast behaviors are invariants?
-4. How should terminal roles map when color is unavailable or `NO_COLOR` is
-   set?
-5. Can the official theme ship as data and generated adapters without creating
-   a premature public package?
+1. Semantic hierarchy, readable emphasis, action contrast, and status meaning
+   are shared. Elements' public tokens remain the component contract; the
+   official values are an adapter over it.
+2. Official browser surfaces use the shared values unless a documented native
+   capability requires adaptation. Decorative neutral separation may vary,
+   but text and meaningful-boundary contrast may not.
+3. Forced-colors must use system colors, retain non-color state cues, and avoid
+   `forced-color-adjust: none` on ordinary UI. Faint text and meaningful
+   boundaries meet their contrast requirements in ordinary themes.
+4. Terminal roles map to ANSI meaning; `NO_COLOR` emits no styling escapes and
+   leaves all textual meaning intact. Machine output is untouched.
+5. The source can ship as checked JSON plus generated CSS in Design while it is
+   candidate. No package or public compatibility promise is required yet.
 
 ## Candidate outputs
 
 | Output | Intended Design path | Maturity |
 | --- | --- | --- |
-| Semantic color role model | `tokens/color.json` | draft |
-| Official light and dark values | `tokens/themes/openbindings.json` | draft |
-| Theme and modality guidance | `brand/theme.md` | draft |
-| Cross-surface color specimen | `specimens/color-theme.html` | draft |
+| Semantic color role model | `tokens/color.json` | candidate |
+| Official light and dark values | `tokens/themes/openbindings.json` | candidate |
+| Generated CSS and Elements adapter | `tokens/generated/openbindings-theme.css` | candidate |
+| Theme and modality guidance | `brand/theme.md` | candidate |
+| Cross-surface color specimen | `specimens/color-theme.html` | candidate |
 
 ## Consumer adoption
 
@@ -83,7 +91,8 @@ Classifications remain hypotheses until proposal review.
 
 ## Exceptions and follow-ups
 
-- Approved exceptions: none yet.
+- Approved exceptions: Elements' neutral fallback palette is preserved by
+  design; it is not an adoption exception. Official hosts apply the adapter.
 - Follow-up slices: machine-material owns syntax palettes; foundations owns
   focus geometry and typography.
 - Final verification date: pending.
