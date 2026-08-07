@@ -1,13 +1,18 @@
 # Design tokens
 
-This directory contains the candidate semantic color system and will grow as
-later design slices establish additional foundations.
+This directory contains the stable semantic interface colors and the candidate
+machine-material system. It will grow as later design slices establish
+additional foundations.
 
 - [`color.json`](color.json) defines color roles and usage constraints.
 - [`themes/openbindings.json`](themes/openbindings.json) supplies the official
   light/dark values plus Elements and terminal mappings.
 - [`generated/openbindings-theme.css`](generated/openbindings-theme.css) is a
   checked adapter written by `npm run generate:theme`.
+- [`machine-material.json`](machine-material.json) defines the closed
+  machine-text palette, functional syntax roles, and renderer mappings.
+- `generated/openbindings-machine-*` contains checked CSS and Shiki adapters
+  written by `npm run generate:machine`.
 
 The token model must distinguish:
 

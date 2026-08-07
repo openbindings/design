@@ -8,9 +8,10 @@ those surfaces into one implementation.
 
 **Status: active.** The repository boundary and ownership model are established,
 and the identity system and official color theme are stable and adopted.
-Broader brand guidance and public packages are still being reviewed through
-focused design slices. Existing consumer files remain authoritative until an
-explicit migration lands.
+The machine-material palette and renderer model is a canonical candidate
+entering consumer migration. Broader brand guidance and public packages are
+still being reviewed through focused design slices. Existing consumer files
+remain authoritative until an explicit migration lands.
 
 This work is tooling and product guidance. It is not part of the OpenBindings
 specification and creates no conformance requirement for third-party

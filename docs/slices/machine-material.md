@@ -1,6 +1,6 @@
 # Design slice: machine material and syntax
 
-Status: inventory
+Status: canonical
 Tracker key: `machine-material`
 Owner: OpenBindings maintainers
 
@@ -40,41 +40,57 @@ The initial comparison is recorded in
 machine-output boundary reinforced by the completed
 [color-theme slice](color-theme.md).
 
-## Common ground to test
+Exact values, Shiki scopes, Lezer tags, and difference classifications are in
+[the machine-material inventory](../evidence/2026-08-07-machine-material-inventory.md).
 
-1. Code surfaces need a distinct neutral material plane, predictable
-   monospace metrics, selection, scrolling, and copy behavior.
-2. Property names, strings, numbers, keywords/literals, punctuation,
-   comments, and invalid input are the smallest plausible cross-language role
-   set. JSON and YAML must prove it before the set expands.
-3. Syntax color is semantic aid, not brand decoration. Plain text, forced
-   colors, and monochrome presentation must remain fully readable.
-4. Editable and read-only code should share meaning even when their rendering
-   engines differ (CodeMirror, Lezer, Shiki, or hand-authored markup).
-5. Public Elements needs neutral defaults; official applications may provide
-   a reviewed adapter over the same public tokens.
+## Accepted model
 
-## Questions for inventory
+Revision 1 follows the public prior-art pattern of a closed palette, a compact
+functional role layer, and native renderer adapters:
 
-- Can Web's Shiki scopes and Elements' Lezer tags map losslessly into one
-  compact semantic role set?
-- Which syntax roles require `4.5:1` contrast, and when may punctuation or
-  comments use the theme's muted role?
-- Should code-surface background and inline-code boundaries live here or in
-  foundations, with this slice consuming them?
-- How should invalid syntax distinguish itself without relying on red alone?
-- Which fixtures prove JSON/YAML fidelity, selection, copy, horizontal
-  overflow, and forced-colors behavior without turning editor implementation
-  details into Design policy?
+1. Official renderers draw from `plain`, four chromatic distinction slots,
+   `muted`, and `invalid` on one machine `surface`.
+2. The default roles are `name`, `string`, `number`, `keyword`, `punctuation`,
+   `comment`, and `invalid`. They are broad intent, not a universal grammar.
+3. A renderer maps its native scopes into those roles and may collapse
+   distinctions. It may not introduce an unreviewed color or redefine actual
+   invalidity merely for variety.
+4. Editable and read-only code share role meaning even when CodeMirror,
+   Lezer, Shiki, or hand-authored markup supplies the classification.
+5. Elements retains its neutral public defaults. The official adapter maps
+   the candidate palette into the existing `--ob-editor-token-*` API.
+6. Plain and forced-colors fallbacks remain readable without chromatic
+   distinctions. Invalid material also carries a diagnostic, marker, or
+   decoration.
 
-## Next inventory actions
+The complete rules are in
+[the machine-material guidance](../../experience/machine-material.md). The
+shared JSON and YAML inputs are under [`specimens/fixtures/`](../../specimens/fixtures/).
 
-1. Capture exact Web Shiki and homepage-example colors in light and dark.
-2. Map every Elements/Workbench Lezer tag to its public token and rendered
-   value.
-3. Render the same JSON and YAML fixtures through Web, static Elements,
-   editable Elements, and Workbench.
-4. Verify that CLI JSON/YAML snapshots contain no ANSI escapes and remain
-   unchanged when `NO_COLOR` varies.
-5. Classify differences as shared roles, neutral component defaults,
-   engine-specific adaptations, or accidental drift before proposing tokens.
+## Candidate outputs
+
+| Output | Design path | Maturity |
+| --- | --- | --- |
+| Palette, roles, and adapter data | `tokens/machine-material.json` | candidate |
+| Official CSS and Elements adapter | `tokens/generated/openbindings-machine-material.css` | candidate |
+| Shiki light and dark themes | `tokens/generated/openbindings-machine-{light,dark}.json` | candidate |
+| Cross-renderer guidance | `experience/machine-material.md` | candidate |
+| Shared JSON/YAML specimen | `specimens/machine-material.html` | candidate |
+
+## Consumer adoption
+
+| Consumer | Mapping | Checks | State |
+| --- | --- | --- | --- |
+| Web | Replace GitHub Shiki themes and map the homepage example | Pending | observed |
+| Elements | Preserve neutral defaults and document the existing role adapter | Pending | observed |
+| Workbench | Replace app-owned values with revision 1 | Pending | observed |
+| OAuth | No syntax or serialized machine-material renderer | — | out_of_scope |
+| CLI | Preserve exact JSON/YAML bytes with no ANSI output | `ob#35` machine-output test | adopted |
+
+## Exceptions and follow-ups
+
+- Typography, code-surface spacing, focus geometry, and general selection
+  behavior remain with foundations or their owning component.
+- Language-specific adapters may extend scope coverage without expanding the
+  palette. A new palette slot requires cross-surface evidence.
+- Final verification date: pending.
