@@ -1,7 +1,7 @@
 {
   "format": "openbindings.design-loop@1",
   "updated": "2026-08-07",
-  "activeSlice": "color-theme",
+  "activeSlice": "machine-material",
   "consumers": {
     "web": {
       "repository": "openbindings/web",
@@ -50,11 +50,12 @@
     },
     "color-theme": {
       "title": "Color roles and official theme",
-      "status": "canonical",
+      "status": "verified",
       "record": "docs/slices/color-theme.md",
       "evidence": [
         "docs/evidence/2026-08-07-common-ground.md",
-        "docs/evidence/2026-08-07-color-theme-inventory.md"
+        "docs/evidence/2026-08-07-color-theme-inventory.md",
+        "docs/evidence/2026-08-07-color-theme-adoption.md"
       ],
       "canonical": [
         "tokens/color.json",
@@ -63,11 +64,11 @@
         "brand/theme.md"
       ],
       "adoption": {
-        "web": "observed",
-        "elements": "observed",
-        "workbench": "observed",
-        "oauth": "observed",
-        "cli": "observed"
+        "web": "adopted",
+        "elements": "adopted",
+        "workbench": "adopted",
+        "oauth": "adopted",
+        "cli": "adopted"
       }
     },
     "foundations": {
@@ -88,8 +89,8 @@
     },
     "machine-material": {
       "title": "Machine material and syntax",
-      "status": "queued",
-      "record": null,
+      "status": "inventory",
+      "record": "docs/slices/machine-material.md",
       "evidence": [
         "docs/evidence/2026-08-07-common-ground.md"
       ],
@@ -99,7 +100,7 @@
         "elements": "observed",
         "workbench": "observed",
         "oauth": "observed",
-        "cli": "not_started"
+        "cli": "observed"
       }
     },
     "status-feedback": {

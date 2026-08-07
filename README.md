@@ -7,11 +7,10 @@ pages, and project assets can feel like parts of one system without forcing
 those surfaces into one implementation.
 
 **Status: active.** The repository boundary and ownership model are established,
-and the identity system is stable and adopted. The official color theme is a
-canonical candidate entering consumer migration. Broader brand guidance and
-public packages are still being reviewed through focused design slices.
-Existing consumer files remain authoritative until an explicit migration
-lands.
+and the identity system and official color theme are stable and adopted.
+Broader brand guidance and public packages are still being reviewed through
+focused design slices. Existing consumer files remain authoritative until an
+explicit migration lands.
 
 This work is tooling and product guidance. It is not part of the OpenBindings
 specification and creates no conformance requirement for third-party
@@ -83,9 +82,9 @@ The full state machine is in [docs/development-loop.md](docs/development-loop.md
 [design-loop.json](design-loop.json) records the current slice and adoption
 state, and the initial evidence is in
 [docs/evidence/2026-08-07-common-ground.md](docs/evidence/2026-08-07-common-ground.md).
-The completed first slice is
-[identity and canonical assets](docs/slices/identity.md). The active slice is
-[color roles and the official theme](docs/slices/color-theme.md).
+The completed slices are [identity and canonical assets](docs/slices/identity.md)
+and [color roles and the official theme](docs/slices/color-theme.md). The active
+slice is [machine material and syntax](docs/slices/machine-material.md).
 
 The Design repository remains canonical even if openbindings.com later renders
 this material as a browsable design-system site. Presentation may be delegated;
@@ -103,7 +102,7 @@ npm run generate
 
 `npm run generate` refreshes committed identity and theme adapters from their
 canonical sources. `npm test` rejects stale generated files and inaccessible
-candidate color combinations.
+color combinations.
 
 Changes use trunk plus tags. Work lands on `main`; future published design
 artifacts will version independently from the specification, SDKs, Elements,
