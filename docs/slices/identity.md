@@ -1,6 +1,6 @@
 # Design slice: identity and canonical assets
 
-Status: inventory
+Status: canonical
 Tracker key: `identity`
 
 ## Frame
@@ -30,6 +30,8 @@ Tracker key: `identity`
 
 The complete initial audit is in
 [the common-ground evidence](../evidence/2026-08-07-common-ground.md).
+The supported-size render is recorded in
+[the identity rendering evidence](../evidence/2026-08-07-identity-rendering.md).
 
 ## Semantic comparison
 
@@ -41,29 +43,32 @@ The complete initial audit is in
 | Copied vector files | Three repositories maintain two wrapper variants around the same geometry | Accidental drift risk | There is no source provenance or synchronization check |
 | Accessible meaning | Header uses are decorative beside visible brand text; favicon has document-level identity | Modality adaptation | Alternative text depends on context, not the SVG alone |
 
-These are inventory classifications. They become decisions only when this
-slice reaches `proposal` and is reviewed.
+These classifications are accepted in
+[Decision 0002](../decisions/0002-canonical-glyph.md).
 
-## Questions to resolve
+## Resolved questions
 
-1. Should the canonical source be a minimal `currentColor` SVG, with a themed
-   favicon generated from it?
-2. Should generated variants be committed to Design, copied during consumer
-   builds, or published in a small asset package?
-3. Which minimum rendered size preserves the nested structure?
-4. Does the existing view box include intentional clear space, and what usage
-   rule should consumers follow?
-5. Should the glyph carry no intrinsic accessible name so each use supplies
-   the correct contextual semantics?
+1. The canonical source is the existing `currentColor` nested-outline SVG; a
+   theme-aware favicon and inline artifact are generated from it.
+2. Generated variants are committed to Design and copied exactly into
+   consumers with provenance. A package is deferred until multiple asset
+   families or other cross-language needs justify it.
+3. Ordinary interface use has a 24 CSS-pixel minimum height. The generated
+   favicon is the explicit 16-pixel exception.
+4. Standalone placements use clear space equal to one quarter of the rendered
+   width; compact chrome and favicons use their container padding.
+5. The SVG carries no intrinsic accessible name; each consumer supplies the
+   correct contextual semantics.
 
 ## Candidate canonical outputs
 
 | Output | Intended Design path | Maturity |
 | --- | --- | --- |
-| Portable monochrome master | `assets/openbindings-glyph.svg` | Not created |
-| Theme-aware favicon | `assets/generated/favicon.svg` | Not created |
-| Geometry and variant check | `scripts/check-assets.mjs` | Not created |
-| Identity usage guidance | `brand/identity.md` | Not created |
+| Portable monochrome master | `assets/openbindings-glyph.svg` | candidate |
+| Inline generated variant | `assets/generated/openbindings-glyph.svg` | candidate |
+| Theme-aware favicon | `assets/generated/favicon.svg` | candidate |
+| Geometry and variant check | `scripts/generate-assets.mjs` | candidate |
+| Identity usage guidance | `brand/identity.md` | candidate |
 
 ## Consumer adoption
 
@@ -75,10 +80,8 @@ slice reaches `proposal` and is reviewed.
 | OAuth | Embed the portable monochrome variant during the Go build | Pending | observed |
 | CLI | No glyph in ordinary terminal output | Graphical identity is outside this medium | out_of_scope |
 
-## Exit criteria for inventory
+## Verification remaining
 
-- Render the three current variants at favicon, header, and authorization sizes.
-- Measure the effective bounds and minimum legible size.
-- Confirm the glyph's origin and licensing history.
-- Choose asset distribution only after testing the simplest generation path in
-  all three consumer repositories.
+- Migrate Web, workbench, and OAuth to the exact generated artifacts.
+- Run the consumer-local checks and record their pull requests or commits.
+- Promote candidate identity guidance to stable only after adoption is proven.

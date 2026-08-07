@@ -8,16 +8,25 @@ const required = [
   "docs/current-state.md",
   "docs/development-loop.md",
   "docs/evidence/2026-08-07-common-ground.md",
+  "docs/evidence/2026-08-07-identity-rendering.md",
   "docs/decisions/0001-independent-repository.md",
+  "docs/decisions/0002-canonical-glyph.md",
   "docs/slices/identity.md",
   "docs/templates/design-slice.md",
   "design-loop.json",
   "assets/README.md",
+  "assets/manifest.json",
+  "assets/openbindings-glyph.svg",
+  "assets/generated/favicon.svg",
+  "assets/generated/openbindings-glyph.svg",
   "brand/README.md",
+  "brand/identity.md",
   "experience/README.md",
   "tokens/README.md",
   "packages/README.md",
   "scripts/design-loop.mjs",
+  "scripts/generate-assets.mjs",
+  "specimens/identity.html",
 ];
 
 await Promise.all(required.map(path => access(new URL(`../${path}`, import.meta.url))));
@@ -76,6 +85,9 @@ for (const [key, slice] of Object.entries(designLoop.slices)) {
   }
   for (const evidencePath of slice.evidence ?? []) {
     await access(new URL(`../${evidencePath}`, import.meta.url));
+  }
+  for (const canonicalPath of slice.canonical ?? []) {
+    await access(new URL(`../${canonicalPath}`, import.meta.url));
   }
   for (const consumer of consumers) {
     const state = slice.adoption?.[consumer];
