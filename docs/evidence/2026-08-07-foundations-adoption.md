@@ -57,7 +57,18 @@ vocabulary; it does not require visual sameness or use of every reference.
 - The CLI keeps terminal-owned fonts, character metrics, whitespace, and ANSI
   semantics. Browser foundation values have no terminal mapping.
 
-## Existing infrastructure condition
+## Existing verification conditions
+
+The hosted Elements check passed package builds, type checks, unit tests, and
+the plain-browser suite, then failed the existing Workbench navigation test
+while waiting for a transient `.ob-reveal-flash` marker. One unchanged rerun
+reproduced the same CI-only timeout. The complete Workbench suite passed
+locally, and the failing test passed three additional consecutive local
+repetitions. The foundation change affects private transition duration only
+when `prefers-reduced-motion: reduce` is active; this test uses the default
+media preference and the marker's 1.2-second JavaScript lifetime is unchanged.
+The timing assumption belongs to the Workbench test and should be hardened in
+its own behavior-focused change, not by coupling it to foundation styling.
 
 The GitHub Actions run attached to ob#36 stopped during dependency download
 because the published checksum for
@@ -74,4 +85,3 @@ Every official surface now names the same foundation boundary. Behavioral
 requirements are verified in their native environments; optional visual
 references remain optional; neutral components and modality-specific profiles
 remain intact. Foundations revision 1 is stable.
-
