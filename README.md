@@ -6,11 +6,11 @@ Elements, the `ob` terminal experience, the embedded workbench, authorization
 pages, and project assets can feel like parts of one system without forcing
 those surfaces into one implementation.
 
-**Status: foundation.** The repository boundary, ownership model, and first
-candidate identity system are established. Broader brand guidance, token
-values, and public packages are still to be reviewed and adopted. Existing
-consumer files remain authoritative for their current implementations until an
-explicit migration lands.
+**Status: active.** The repository boundary and ownership model are established,
+and the identity system is stable and adopted. Broader brand guidance, token
+values, and public packages are still being reviewed through focused design
+slices. Existing consumer files remain authoritative until an explicit
+migration lands.
 
 This work is tooling and product guidance. It is not part of the OpenBindings
 specification and creates no conformance requirement for third-party
@@ -82,7 +82,9 @@ The full state machine is in [docs/development-loop.md](docs/development-loop.md
 [design-loop.json](design-loop.json) records the current slice and adoption
 state, and the initial evidence is in
 [docs/evidence/2026-08-07-common-ground.md](docs/evidence/2026-08-07-common-ground.md).
-The active slice is [identity and canonical assets](docs/slices/identity.md).
+The completed first slice is
+[identity and canonical assets](docs/slices/identity.md). The active slice is
+[color roles and the official theme](docs/slices/color-theme.md).
 
 The Design repository remains canonical even if openbindings.com later renders
 this material as a browsable design-system site. Presentation may be delegated;

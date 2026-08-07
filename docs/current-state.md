@@ -3,6 +3,9 @@
 Date: 2026-08-07. This is a factual starting inventory, not an adopted style
 guide.
 
+This snapshot predates the first consumer migrations. Use
+[`design-loop.json`](../design-loop.json) for current slice and adoption state.
+
 ## Official surfaces
 
 | Surface | Current implementation source | Existing system |

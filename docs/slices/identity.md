@@ -1,6 +1,6 @@
 # Design slice: identity and canonical assets
 
-Status: canonical
+Status: verified
 Tracker key: `identity`
 
 ## Frame
@@ -60,28 +60,32 @@ These classifications are accepted in
 5. The SVG carries no intrinsic accessible name; each consumer supplies the
    correct contextual semantics.
 
-## Candidate canonical outputs
+## Canonical outputs
 
 | Output | Intended Design path | Maturity |
 | --- | --- | --- |
-| Portable monochrome master | `assets/openbindings-glyph.svg` | candidate |
-| Inline generated variant | `assets/generated/openbindings-glyph.svg` | candidate |
-| Theme-aware favicon | `assets/generated/favicon.svg` | candidate |
-| Geometry and variant check | `scripts/generate-assets.mjs` | candidate |
-| Identity usage guidance | `brand/identity.md` | candidate |
+| Portable monochrome master | `assets/openbindings-glyph.svg` | stable |
+| Inline generated variant | `assets/generated/openbindings-glyph.svg` | stable |
+| Theme-aware favicon | `assets/generated/favicon.svg` | stable |
+| Geometry and variant check | `scripts/generate-assets.mjs` | stable |
+| Identity usage guidance | `brand/identity.md` | stable |
 
 ## Consumer adoption
 
 | Consumer | Expected mapping | Evidence | State |
 | --- | --- | --- | --- |
-| Web | Consume or verify the generated favicon | Pending | observed |
+| Web | Verify the exact generated favicon in the normal test command | [web#13](https://github.com/openbindings/web/pull/13), `caf933752e1353a4760476b44c64bd959961aa90` | adopted |
 | Elements | No official identity in neutral public components | Identity is outside the component contract | out_of_scope |
-| Workbench | Consume or verify the generated favicon and mask it with semantic text color | Pending | observed |
-| OAuth | Embed the portable monochrome variant during the Go build | Pending | observed |
+| Workbench | Verify the exact generated favicon and keep its semantic-color mask | [elements#2](https://github.com/openbindings/elements/pull/2), `9bf6cf24e5abb5064db89b7524115a4b058f2ae5` | adopted |
+| OAuth | Embed and verify the portable monochrome variant during the Go build | [ob#34](https://github.com/openbindings/ob/pull/34), `d2dab66b4752f06c0618b87675c4b55a5bad4f5c` | adopted |
 | CLI | No glyph in ordinary terminal output | Graphical identity is outside this medium | out_of_scope |
 
-## Verification remaining
+## Verification
 
-- Migrate Web, workbench, and OAuth to the exact generated artifacts.
-- Run the consumer-local checks and record their pull requests or commits.
-- Promote candidate identity guidance to stable only after adoption is proven.
+Web, workbench, and OAuth now carry exact revision 1 artifacts and durable
+checksum checks. Local consumer suites passed, and the light/dark specimen was
+reviewed from 16 through 96 CSS pixels. The complete adoption record, including
+independently diagnosed remote CI exceptions, is in
+[the identity adoption evidence](../evidence/2026-08-07-identity-adoption.md).
+
+Final verification date: 2026-08-07.
