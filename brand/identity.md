@@ -32,6 +32,20 @@ dark surfaces.
   glyph's rendered width. Compact application chrome and favicons may use their
   container's established padding instead.
 
+## Compositional freedom
+
+OpenBindings has no canonical wordmark and no fixed glyph-and-name lockup. The
+glyph may sit beside the correctly spelled name “OpenBindings” in any legible
+typography, weight, spacing, case treatment, or arrangement appropriate to the
+surface. Conventional baseline alignment and balanced optical spacing are
+useful craft choices, not identity requirements.
+
+Typography accompanying the glyph remains live surface expression. Do not
+trace a particular treatment into an asset, designate one specimen as the
+required lockup, or reject a composition merely because it uses a different
+typeface. The canonical glyph—not the adjacent typography—is the stable
+identity asset.
+
 ## Accessibility
 
 The SVG deliberately carries no `role`, `title`, or `aria-label` because the

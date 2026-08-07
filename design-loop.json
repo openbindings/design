@@ -73,10 +73,17 @@
     },
     "foundations": {
       "title": "Typography, density, shape, focus, and motion",
-      "status": "inventory",
+      "status": "proposal",
       "record": "docs/slices/foundations.md",
       "evidence": [
-        "docs/evidence/2026-08-07-common-ground.md"
+        "docs/evidence/2026-08-07-common-ground.md",
+        "docs/evidence/2026-08-07-foundations-inventory.md"
+      ],
+      "canonical": [
+        "tokens/foundations.json",
+        "tokens/generated/openbindings-foundations.css",
+        "experience/foundations.md",
+        "specimens/foundations.html"
       ],
       "canonical": [],
       "adoption": {
