@@ -14,6 +14,9 @@ identity across unlike media.
 
 Current guidance:
 
-- [Machine material and syntax](machine-material.md) defines the candidate
+- [Interface foundations](foundations.md) separates candidate behavioral
+  requirements from deliberately open visual references and expression
+  profiles.
+- [Machine material and syntax](machine-material.md) defines the stable
   palette, role hierarchy, renderer boundary, and serialization boundary for
   computer-authored material shown to people.

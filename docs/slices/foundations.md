@@ -1,6 +1,6 @@
 # Design slice: interface foundations
 
-Status: inventory
+Status: proposal
 Tracker key: `foundations`
 Owner: OpenBindings maintainers
 
@@ -22,12 +22,13 @@ Owner: OpenBindings maintainers
   scales, representative specimens, explicit modality adaptations, and
   verified consumer adoption.
 
-## Starting evidence
+## Inventory evidence
 
 The broad comparison begins with
-[the common-ground inventory](../evidence/2026-08-07-common-ground.md). This
-slice must now record exact values and rendered examples before proposing a
-shared system.
+[the common-ground inventory](../evidence/2026-08-07-common-ground.md). The
+[exact foundations inventory](../evidence/2026-08-07-foundations-inventory.md)
+pins consumer commits, records implementation values, and classifies each
+difference.
 
 | Concern | Initial observation | Inventory question |
 | --- | --- | --- |
@@ -38,13 +39,28 @@ shared system.
 | Motion | Transitions are short and mostly functional | Which motion roles are useful, and how must reduced-motion collapse them? |
 | Terminal structure | CLI uses whitespace, indentation, and native emphasis rather than CSS | Which foundation decisions have a meaningful terminal adaptation? |
 
-## Next inventory actions
+## Proposed model
 
-1. Capture exact type stacks, sizes, line heights, spacing values, radii,
-   focus treatments, and motion timings at pinned consumer commits.
-2. Classify differences as shared foundation, official expression, neutral
-   component default, modality adaptation, or unresolved inconsistency.
-3. Build a cross-surface specimen before accepting any scale or token names.
+The proposal has two deliberately unequal tiers:
 
-No foundation value is canonical yet. Existing consumer implementations remain
-authoritative until this slice reaches migration.
+1. **Required behavioral guardrails:** visible and unobscured keyboard focus,
+   accessible pointer targets, adaptable text, and reduced-motion support.
+2. **Open visual references:** familiar type stacks, rhythm anchors, radii,
+   focus geometry, and motion tempos that consumers may adopt, interpolate,
+   or decline.
+
+Expression profiles document editorial, application, embedded, and terminal
+adaptations. They are illustrative, not style presets. In particular, the
+system defines neither a canonical wordmark nor a fixed glyph-and-name lockup;
+typography beside the glyph stays surface-owned.
+
+## Candidate sources
+
+- [`tokens/foundations.json`](../../tokens/foundations.json)
+- [`tokens/generated/openbindings-foundations.css`](../../tokens/generated/openbindings-foundations.css)
+- [`experience/foundations.md`](../../experience/foundations.md)
+- [`specimens/foundations.html`](../../specimens/foundations.html)
+
+The proposal advances only after the specimen proves expressive latitude and
+consumer migrations close genuine behavioral gaps without normalizing
+intentional surface differences.

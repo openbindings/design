@@ -42,7 +42,7 @@ The detailed routing rules are in [docs/authority.md](docs/authority.md).
 ## Repository structure
 
 ```text
-assets/       canonical glyphs, wordmarks, icons, and generated-asset inputs
+assets/       canonical glyphs, icons, and generated-asset inputs
 brand/        identity, voice, typography, and brand-expression guidance
 experience/   interaction, UI content, accessibility, and modality guidance
 tokens/       machine-readable foundation and semantic design decisions
@@ -101,9 +101,10 @@ npm run loop
 npm run generate
 ```
 
-`npm run generate` refreshes committed identity and theme adapters from their
-canonical sources. `npm test` rejects stale generated files and inaccessible
-color combinations.
+`npm run generate` refreshes committed identity, theme, machine-material, and
+foundation adapters from their canonical sources. `npm test` rejects stale
+generated files, inaccessible color combinations, and accidental conversion
+of open visual references into closed requirements.
 
 Changes use trunk plus tags. Work lands on `main`; future published design
 artifacts will version independently from the specification, SDKs, Elements,
