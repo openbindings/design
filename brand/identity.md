@@ -1,6 +1,6 @@
 # OpenBindings identity
 
-Status: candidate
+Status: stable
 Identity revision: 1
 
 ## The glyph

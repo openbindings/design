@@ -1,7 +1,7 @@
 {
   "format": "openbindings.design-loop@1",
   "updated": "2026-08-07",
-  "activeSlice": "identity",
+  "activeSlice": "color-theme",
   "consumers": {
     "web": {
       "repository": "openbindings/web",
@@ -27,11 +27,12 @@
   "slices": {
     "identity": {
       "title": "Identity and canonical assets",
-      "status": "canonical",
+      "status": "verified",
       "record": "docs/slices/identity.md",
       "evidence": [
         "docs/evidence/2026-08-07-common-ground.md",
-        "docs/evidence/2026-08-07-identity-rendering.md"
+        "docs/evidence/2026-08-07-identity-rendering.md",
+        "docs/evidence/2026-08-07-identity-adoption.md"
       ],
       "canonical": [
         "assets/openbindings-glyph.svg",
@@ -40,17 +41,17 @@
         "docs/decisions/0002-canonical-glyph.md"
       ],
       "adoption": {
-        "web": "observed",
+        "web": "adopted",
         "elements": "out_of_scope",
-        "workbench": "observed",
-        "oauth": "observed",
+        "workbench": "adopted",
+        "oauth": "adopted",
         "cli": "out_of_scope"
       }
     },
     "color-theme": {
       "title": "Color roles and official theme",
-      "status": "queued",
-      "record": null,
+      "status": "inventory",
+      "record": "docs/slices/color-theme.md",
       "evidence": [
         "docs/evidence/2026-08-07-common-ground.md"
       ],
