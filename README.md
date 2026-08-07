@@ -66,12 +66,34 @@ authority:
 Third-party Elements consumers are not required to use the OpenBindings theme.
 Themeability remains a product feature, not a brand exception.
 
+## Development loop
+
+Design work uses a reverse-and-return loop:
+
+1. inventory evidence from the official surfaces;
+2. identify shared roles and intentional differences;
+3. ratify one small design slice in this repository;
+4. publish its guidance, assets, or machine-readable artifacts here;
+5. migrate each consumer through its own repository; and
+6. record verification and any approved modality exceptions here.
+
+The full state machine is in [docs/development-loop.md](docs/development-loop.md).
+[design-loop.json](design-loop.json) records the current slice and adoption
+state, and the initial evidence is in
+[docs/evidence/2026-08-07-common-ground.md](docs/evidence/2026-08-07-common-ground.md).
+The active slice is [identity and canonical assets](docs/slices/identity.md).
+
+The Design repository remains canonical even if openbindings.com later renders
+this material as a browsable design-system site. Presentation may be delegated;
+authority is not.
+
 ## Development
 
 The repository currently has no runtime dependencies:
 
 ```sh
 npm test
+npm run loop
 ```
 
 Changes use trunk plus tags. Work lands on `main`; future published design

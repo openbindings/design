@@ -13,6 +13,12 @@ Before proposing a change:
    experiences should be related, not artificially identical.
 5. Add mechanical evidence for checkable rules whenever practical.
 
+Shared changes should belong to a slice in [`design-loop.json`](design-loop.json)
+and follow [`docs/development-loop.md`](docs/development-loop.md). Start from
+[`docs/templates/design-slice.md`](docs/templates/design-slice.md); record exact
+source commits during inventory and consumer adoption evidence before marking a
+decision stable.
+
 Run:
 
 ```sh
