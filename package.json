@@ -1,0 +1,12 @@
+{
+  "name": "@openbindings/design-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Project-wide brand and product-experience system for OpenBindings",
+  "license": "Apache-2.0",
+  "repository": "github:openbindings/design",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test": "npm run check"
+  }
+}
