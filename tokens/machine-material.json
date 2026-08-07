@@ -2,7 +2,7 @@
   "format": "openbindings.machine-material@1",
   "name": "openbindings-machine-material",
   "revision": 1,
-  "maturity": "candidate",
+  "maturity": "stable",
   "scope": "Machine-authored material rendered for humans in official OpenBindings browser surfaces",
   "palette": {
     "surface": {

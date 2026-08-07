@@ -1,6 +1,6 @@
 # Machine material and syntax
 
-Maturity: **candidate**
+Maturity: **stable**
 Machine-material revision: **1**
 
 Machine material is JSON, YAML, source, schemas, identifiers, commands, and
