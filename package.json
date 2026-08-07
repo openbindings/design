@@ -7,6 +7,7 @@
   "repository": "github:openbindings/design",
   "scripts": {
     "check": "node scripts/check.mjs",
+    "loop": "node scripts/design-loop.mjs",
     "test": "npm run check"
   }
 }

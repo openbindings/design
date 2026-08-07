@@ -1,0 +1,123 @@
+{
+  "format": "openbindings.design-loop@1",
+  "updated": "2026-08-07",
+  "activeSlice": "identity",
+  "consumers": {
+    "web": {
+      "repository": "openbindings/web",
+      "surface": "openbindings.com"
+    },
+    "elements": {
+      "repository": "openbindings/elements",
+      "surface": "public web components"
+    },
+    "workbench": {
+      "repository": "openbindings/elements",
+      "surface": "ob start workbench"
+    },
+    "oauth": {
+      "repository": "openbindings/ob",
+      "surface": "authorization pages"
+    },
+    "cli": {
+      "repository": "openbindings/ob",
+      "surface": "human-facing terminal output"
+    }
+  },
+  "slices": {
+    "identity": {
+      "title": "Identity and canonical assets",
+      "status": "inventory",
+      "record": "docs/slices/identity.md",
+      "evidence": [
+        "docs/evidence/2026-08-07-common-ground.md"
+      ],
+      "canonical": [],
+      "adoption": {
+        "web": "observed",
+        "elements": "out_of_scope",
+        "workbench": "observed",
+        "oauth": "observed",
+        "cli": "out_of_scope"
+      }
+    },
+    "color-theme": {
+      "title": "Color roles and official theme",
+      "status": "queued",
+      "record": null,
+      "evidence": [
+        "docs/evidence/2026-08-07-common-ground.md"
+      ],
+      "canonical": [],
+      "adoption": {
+        "web": "observed",
+        "elements": "observed",
+        "workbench": "observed",
+        "oauth": "observed",
+        "cli": "observed"
+      }
+    },
+    "foundations": {
+      "title": "Typography, density, shape, focus, and motion",
+      "status": "queued",
+      "record": null,
+      "evidence": [
+        "docs/evidence/2026-08-07-common-ground.md"
+      ],
+      "canonical": [],
+      "adoption": {
+        "web": "observed",
+        "elements": "observed",
+        "workbench": "observed",
+        "oauth": "observed",
+        "cli": "not_started"
+      }
+    },
+    "machine-material": {
+      "title": "Machine material and syntax",
+      "status": "queued",
+      "record": null,
+      "evidence": [
+        "docs/evidence/2026-08-07-common-ground.md"
+      ],
+      "canonical": [],
+      "adoption": {
+        "web": "observed",
+        "elements": "observed",
+        "workbench": "observed",
+        "oauth": "observed",
+        "cli": "not_started"
+      }
+    },
+    "status-feedback": {
+      "title": "Status, feedback, and recovery",
+      "status": "queued",
+      "record": null,
+      "evidence": [
+        "docs/evidence/2026-08-07-common-ground.md"
+      ],
+      "canonical": [],
+      "adoption": {
+        "web": "not_started",
+        "elements": "observed",
+        "workbench": "observed",
+        "oauth": "observed",
+        "cli": "observed"
+      }
+    },
+    "voice-content": {
+      "title": "Voice and UI content",
+      "status": "queued",
+      "record": null,
+      "evidence": [],
+      "canonical": [],
+      "adoption": {
+        "web": "not_started",
+        "elements": "not_started",
+        "workbench": "not_started",
+        "oauth": "not_started",
+        "cli": "not_started"
+      }
+    }
+  }
+}
