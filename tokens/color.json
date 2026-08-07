@@ -1,6 +1,6 @@
 {
   "format": "openbindings.color-roles@1",
-  "maturity": "candidate",
+  "maturity": "stable",
   "scope": "Official OpenBindings browser surfaces, with named neutral-component and terminal adaptations",
   "roles": {
     "background": {
@@ -73,7 +73,6 @@
     }
   },
   "deferred": [
-    "Syntax and machine-material token colors",
     "Typography and focus geometry",
     "Public compatibility policy for generated adapters"
   ]

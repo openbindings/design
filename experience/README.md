@@ -11,3 +11,9 @@ surfaces.
 
 The goal is family resemblance and shared behavior, not pixel or sentence
 identity across unlike media.
+
+Current guidance:
+
+- [Machine material and syntax](machine-material.md) defines the candidate
+  palette, role hierarchy, renderer boundary, and serialization boundary for
+  computer-authored material shown to people.

@@ -89,18 +89,26 @@
     },
     "machine-material": {
       "title": "Machine material and syntax",
-      "status": "inventory",
+      "status": "canonical",
       "record": "docs/slices/machine-material.md",
       "evidence": [
-        "docs/evidence/2026-08-07-common-ground.md"
+        "docs/evidence/2026-08-07-common-ground.md",
+        "docs/evidence/2026-08-07-machine-material-inventory.md"
       ],
-      "canonical": [],
+      "canonical": [
+        "tokens/machine-material.json",
+        "tokens/generated/openbindings-machine-material.css",
+        "tokens/generated/openbindings-machine-light.json",
+        "tokens/generated/openbindings-machine-dark.json",
+        "experience/machine-material.md",
+        "specimens/machine-material.html"
+      ],
       "adoption": {
         "web": "observed",
         "elements": "observed",
         "workbench": "observed",
-        "oauth": "observed",
-        "cli": "observed"
+        "oauth": "out_of_scope",
+        "cli": "adopted"
       }
     },
     "status-feedback": {
