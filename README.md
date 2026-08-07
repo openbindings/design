@@ -6,11 +6,11 @@ Elements, the `ob` terminal experience, the embedded workbench, authorization
 pages, and project assets can feel like parts of one system without forcing
 those surfaces into one implementation.
 
-**Status: foundation.** The repository boundary and ownership model are
-established. The actual brand guide, token values, asset masters, and public
-packages are still to be reviewed and adopted. Existing consumer files remain
-authoritative for their current implementations until an explicit migration
-lands.
+**Status: foundation.** The repository boundary, ownership model, and first
+candidate identity system are established. Broader brand guidance, token
+values, and public packages are still to be reviewed and adopted. Existing
+consumer files remain authoritative for their current implementations until an
+explicit migration lands.
 
 This work is tooling and product guidance. It is not part of the OpenBindings
 specification and creates no conformance requirement for third-party
@@ -47,6 +47,7 @@ brand/        identity, voice, typography, and brand-expression guidance
 experience/   interaction, UI content, accessibility, and modality guidance
 tokens/       machine-readable foundation and semantic design decisions
 packages/     distributable artifacts, including the future @openbindings/design
+specimens/    durable browser previews for visual review
 docs/         authority, current-state inventory, decisions, and migrations
 scripts/      repository validation and generation tooling
 ```

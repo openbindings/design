@@ -1,9 +1,18 @@
 # Assets
 
-This directory will hold the canonical source assets for the official
-OpenBindings identity and the inputs used to generate delivery variants.
+This directory contains canonical OpenBindings identity sources and committed
+generated variants.
 
-Before migrating consumer copies, adopt rules for glyph geometry, clear space,
-minimum size, current-color versus fixed-color rendering, wordmarks, favicons,
-social cards, and accessible descriptions. Do not treat an exported consumer
-SVG as the master merely because it is already deployed.
+- [`openbindings-glyph.svg`](openbindings-glyph.svg) is the presentation-neutral
+  canonical glyph.
+- [`manifest.json`](manifest.json) names the identity revision, generated
+  variants, intended uses, and current consumers.
+- `generated/` is written by `npm run generate` and checked by `npm test`.
+
+Do not edit a generated asset in either this repository or a consumer. Change
+the canonical source, regenerate the variants, and run the identity slice's
+consumer migration loop.
+
+Usage, clear space, minimum size, and accessibility rules are in
+[`brand/identity.md`](../brand/identity.md). Wordmarks, social cards, and
+product-specific compositions are not yet part of the adopted identity system.

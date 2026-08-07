@@ -27,12 +27,18 @@
   "slices": {
     "identity": {
       "title": "Identity and canonical assets",
-      "status": "inventory",
+      "status": "canonical",
       "record": "docs/slices/identity.md",
       "evidence": [
-        "docs/evidence/2026-08-07-common-ground.md"
+        "docs/evidence/2026-08-07-common-ground.md",
+        "docs/evidence/2026-08-07-identity-rendering.md"
       ],
-      "canonical": [],
+      "canonical": [
+        "assets/openbindings-glyph.svg",
+        "assets/manifest.json",
+        "brand/identity.md",
+        "docs/decisions/0002-canonical-glyph.md"
+      ],
       "adoption": {
         "web": "observed",
         "elements": "out_of_scope",
