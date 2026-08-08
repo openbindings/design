@@ -16,13 +16,16 @@ const required = [
   "docs/evidence/2026-08-07-machine-material-adoption.md",
   "docs/evidence/2026-08-07-foundations-inventory.md",
   "docs/evidence/2026-08-07-foundations-adoption.md",
+  "docs/evidence/2026-08-08-verbal-identity-inventory.md",
   "docs/decisions/0001-independent-repository.md",
   "docs/decisions/0002-canonical-glyph.md",
+  "docs/decisions/0003-canonical-tagline.md",
   "docs/slices/color-theme.md",
   "docs/slices/foundations.md",
   "docs/slices/status-feedback.md",
   "docs/slices/identity.md",
   "docs/slices/machine-material.md",
+  "docs/slices/verbal-identity.md",
   "docs/templates/design-slice.md",
   "design-loop.json",
   "assets/README.md",
@@ -33,6 +36,8 @@ const required = [
   "brand/README.md",
   "brand/identity.md",
   "brand/theme.md",
+  "brand/verbal-identity.json",
+  "brand/verbal-identity.md",
   "experience/README.md",
   "experience/foundations.md",
   "experience/machine-material.md",
@@ -76,6 +81,14 @@ if (packageJson.private !== true) {
 const designLoop = JSON.parse(
   await readFile(new URL("../design-loop.json", import.meta.url), "utf8"),
 );
+const verbalIdentity = JSON.parse(
+  await readFile(new URL("../brand/verbal-identity.json", import.meta.url), "utf8"),
+);
+const verbalIdentityGuide = await readFile(
+  new URL("../brand/verbal-identity.md", import.meta.url),
+  "utf8",
+);
+const verbalIdentityGuideNormalized = verbalIdentityGuide.replace(/\s+/g, " ");
 const sliceStates = new Set([
   "queued",
   "inventory",
@@ -99,6 +112,27 @@ if (designLoop.format !== "openbindings.design-loop@1") {
 }
 if (consumers.length === 0) {
   throw new Error("design-loop.json must declare at least one consumer");
+}
+
+if (
+  verbalIdentity.format !== "openbindings.verbal-identity@1" ||
+  verbalIdentity.revision !== 1 ||
+  verbalIdentity.tagline !== "One interface. Any binding." ||
+  verbalIdentity.descriptor !==
+    "Describe what a service does separately from how you access it."
+) {
+  throw new Error("verbal identity revision 1 must preserve the canonical strings");
+}
+
+for (const fragment of [
+  "The tagline is optional.",
+  "does not create a wordmark or a fixed glyph-and-name lockup",
+  "It does not promise that every implementation has installed, supports, or can reach every binding.",
+  "Scenario or campaign headline",
+]) {
+  if (!verbalIdentityGuideNormalized.includes(fragment)) {
+    throw new Error(`verbal identity guidance is missing its open-use boundary: ${fragment}`);
+  }
 }
 if (!designLoop.slices?.[designLoop.activeSlice]) {
   throw new Error("design-loop.json activeSlice must name a declared slice");
