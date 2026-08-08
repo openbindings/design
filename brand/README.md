@@ -9,4 +9,7 @@ OpenBindings terminology. Product-content guidance belongs under
 
 The stable systems are [the OpenBindings identity](identity.md), including the
 canonical nested-binding glyph and its deliberately open composition rules,
-and the adopted [official color theme](theme.md).
+and the adopted [official color theme](theme.md). The candidate
+[verbal-identity guidance](verbal-identity.md) defines an exact optional
+tagline and a preferred explanatory descriptor without creating a wordmark or
+lockup.

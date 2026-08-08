@@ -1,7 +1,7 @@
 {
   "format": "openbindings.design-loop@1",
-  "updated": "2026-08-07",
-  "activeSlice": "status-feedback",
+  "updated": "2026-08-08",
+  "activeSlice": "verbal-identity",
   "consumers": {
     "web": {
       "repository": "openbindings/web",
@@ -133,6 +133,26 @@
         "workbench": "observed",
         "oauth": "observed",
         "cli": "observed"
+      }
+    },
+    "verbal-identity": {
+      "title": "Canonical verbal identity",
+      "status": "migration",
+      "record": "docs/slices/verbal-identity.md",
+      "evidence": [
+        "docs/evidence/2026-08-08-verbal-identity-inventory.md"
+      ],
+      "canonical": [
+        "brand/verbal-identity.json",
+        "brand/verbal-identity.md",
+        "docs/decisions/0003-canonical-tagline.md"
+      ],
+      "adoption": {
+        "web": "migrating",
+        "elements": "out_of_scope",
+        "workbench": "out_of_scope",
+        "oauth": "out_of_scope",
+        "cli": "migrating"
       }
     },
     "voice-content": {
