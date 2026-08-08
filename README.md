@@ -90,7 +90,7 @@ The completed slices are [identity and canonical assets](docs/slices/identity.md
 [machine material and syntax](docs/slices/machine-material.md). The active
 slice is [canonical verbal identity](docs/slices/verbal-identity.md); the
 partially inventoried [status, feedback, and recovery](docs/slices/status-feedback.md)
-slice remains queued behind it.
+slice remains paused behind it.
 
 The Design repository remains canonical even if openbindings.com later renders
 this material as a browsable design-system site. Presentation may be delegated;
