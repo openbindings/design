@@ -52,11 +52,11 @@ These rules are accepted in
 
 | Consumer | Mapping | Pull request or commit | Checks | State |
 | --- | --- | --- | --- | --- |
-| Web | Metadata, social-card text, and alternative text | [web#19](https://github.com/openbindings/web/pull/19), `a0ff68d` | Exact source assertions plus regenerated social card | migrating |
-| Spec | README introduction and repository description | [spec#32](https://github.com/openbindings/spec/pull/32), `ccf18c9` | README assertion in the existing design-assets check | migrating |
-| CLI | Human-facing root help plus a concrete, nonslogan product description | [ob#37](https://github.com/openbindings/ob/pull/37), `1d89a92` | Go test for the root command summary and interface validation | migrating |
-| Go SDK | README introduction | [openbindings-go#62](https://github.com/openbindings/openbindings-go/pull/62), `40223e3` | Review of source diff and rendered Markdown | migrating |
-| TypeScript SDK | Root and SDK README introductions | [openbindings-ts#64](https://github.com/openbindings/openbindings-ts/pull/64), `e2a72cb` | Repository-local README assertion | migrating |
+| Web | Metadata, social-card text, and alternative text | [web#19](https://github.com/openbindings/web/pull/19), `a0ff68d` | 43 local tests and exact source assertions pass; regenerated card reviewed; hosted CI awaits retarget from its Wave 0 base to `main` | migrating |
+| Spec | README introduction and repository description | [spec#32](https://github.com/openbindings/spec/pull/32), `ccf18c9` | README assertion passes locally; hosted CI awaits retarget from its Wave 0 base to `main` | migrating |
+| CLI | Human-facing root help plus a concrete, nonslogan product description | [ob#37](https://github.com/openbindings/ob/pull/37), `1d89a92` | App/cmd suites pass locally; hosted CI stops before build on the pre-existing published-module checksum mismatch | migrating |
+| Go SDK | README introduction | [openbindings-go#62](https://github.com/openbindings/openbindings-go/pull/62), `40223e3` | All ten hosted module jobs pass | migrating |
+| TypeScript SDK | Root and SDK README introductions | [openbindings-ts#64](https://github.com/openbindings/openbindings-ts/pull/64), `e2a72cb` | Build, all 335 local tests, and hosted CI pass | migrating |
 | Elements and Workbench | No project tagline currently presented | No migration required | Scope review | out_of_scope |
 | OAuth | No project tagline currently presented | No migration required | Scope review | out_of_scope |
 
