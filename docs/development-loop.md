@@ -26,7 +26,10 @@ status feedback, or voice.
    OpenBindings theme that maps into that contract.
 5. **Respect upstream authority.** Design uses vocabulary from Spec and
    Interfaces; it does not redefine it. Elements, Web, and `ob` retain their
-   behavioral and implementation authority.
+   behavioral and implementation authority. For binding semantics, the exact
+   binding specification decides which artifact or protocol authorities it
+   incorporates; Design does not infer that relationship from an artifact's
+   shape.
 6. **Accessibility is an invariant.** Contrast, focus visibility, reduced
    motion, keyboard behavior, readable copy, terminal capability, and
    `NO_COLOR` handling are acceptance criteria rather than a later polish pass.
