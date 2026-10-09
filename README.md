@@ -9,7 +9,7 @@ Elements, the `ob` terminal experience, the embedded workbench, authorization
 pages, and project assets can feel like parts of one system without forcing
 those surfaces into one implementation.
 
-**Status: active.** The repository boundary and ownership model are established,
+**Status: historical source.** The current design authority has moved to `openbindings/project/design`; the identity and ownership records below are preserved,
 and the identity, official color theme, interface foundations, and
 machine-material systems are stable and adopted. A canonical tagline and
 explanatory descriptor are accepted and migrating through official surfaces.
@@ -95,9 +95,8 @@ slice is [canonical verbal identity](docs/slices/verbal-identity.md); the
 partially inventoried [status, feedback, and recovery](docs/slices/status-feedback.md)
 slice remains paused behind it.
 
-The Design repository remains canonical even if openbindings.com later renders
-this material as a browsable design-system site. Presentation may be delegated;
-authority is not.
+The consolidated `openbindings/project/design` directory is canonical. This
+repository preserves the source history from before that move.
 
 ## Development
 
