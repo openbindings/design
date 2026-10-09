@@ -1,5 +1,8 @@
 # Design slice: status, feedback, and recovery
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/docs/slices/status-feedback.md). This repository preserves historical source and adoption evidence.
+
+
 Status: inventory
 Tracker key: `status-feedback`
 Owner: OpenBindings maintainers

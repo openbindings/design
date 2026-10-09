@@ -1,5 +1,8 @@
 # Authority and ownership
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/docs/authority.md). This repository preserves historical source and adoption evidence.
+
+
 OpenBindings Design is an integrating design authority, not an authority over
 every concept that appears in a user interface. Repository location does not
 erase the project's existing layer boundaries.

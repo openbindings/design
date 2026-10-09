@@ -1,5 +1,8 @@
 # Current-state inventory
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/docs/current-state.md). This repository preserves historical source and adoption evidence.
+
+
 Date: 2026-08-07. This is a factual starting inventory, not an adopted style
 guide.
 

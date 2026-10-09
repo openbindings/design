@@ -1,5 +1,8 @@
 # Design tokens
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/tokens/README.md). This repository preserves historical source and adoption evidence.
+
+
 This directory contains stable semantic interface colors and machine material,
 plus candidate open interface-foundation references.
 

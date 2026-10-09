@@ -1,5 +1,8 @@
 # Design slice: machine material and syntax
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/docs/slices/machine-material.md). This repository preserves historical source and adoption evidence.
+
+
 Status: verified
 Tracker key: `machine-material`
 Owner: OpenBindings maintainers

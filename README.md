@@ -1,5 +1,8 @@
 # OpenBindings Design
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/tree/main/design). This repository preserves historical source and adoption evidence.
+
+
 OpenBindings Design is the nonnormative, project-wide authority for the
 official OpenBindings brand and product experience. It exists so the website,
 Elements, the `ob` terminal experience, the embedded workbench, authorization
