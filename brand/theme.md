@@ -1,5 +1,8 @@
 # Official OpenBindings color theme
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/brand/theme.md). This repository preserves historical source and adoption evidence.
+
+
 Maturity: **stable**
 Theme revision: **1**
 

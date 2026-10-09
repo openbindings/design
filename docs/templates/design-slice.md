@@ -1,5 +1,8 @@
 # Design slice: <name>
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/docs/templates/design-slice.md). This repository preserves historical source and adoption evidence.
+
+
 Status: draft
 Tracker key: `<key>`
 Owner: <person or team>

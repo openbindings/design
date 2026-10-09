@@ -1,5 +1,8 @@
 # OpenBindings verbal identity
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/brand/verbal-identity.md). This repository preserves historical source and adoption evidence.
+
+
 Status: candidate
 Verbal identity revision: 1
 

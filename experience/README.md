@@ -1,5 +1,8 @@
 # Product experience
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/experience/README.md). This repository preserves historical source and adoption evidence.
+
+
 This directory will define cross-surface experience principles and UI-content
 patterns for official OpenBindings products.
 

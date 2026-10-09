@@ -1,5 +1,8 @@
 # Design-system development loop
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/docs/development-loop.md). This repository preserves historical source and adoption evidence.
+
+
 This loop turns the strongest existing OpenBindings product decisions into an
 explicit system, then returns those decisions to each product through native
 implementations. It is a reverse-and-return loop, not a visual rewrite and not

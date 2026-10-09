@@ -1,5 +1,8 @@
 # Design slice: interface foundations
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/docs/slices/foundations.md). This repository preserves historical source and adoption evidence.
+
+
 Status: verified
 Tracker key: `foundations`
 Owner: OpenBindings maintainers

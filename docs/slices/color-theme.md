@@ -1,5 +1,8 @@
 # Design slice: color roles and official theme
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/docs/slices/color-theme.md). This repository preserves historical source and adoption evidence.
+
+
 Status: verified
 Tracker key: `color-theme`
 Owner: OpenBindings maintainers

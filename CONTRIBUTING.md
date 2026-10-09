@@ -1,5 +1,8 @@
 # Contributing
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/CONTRIBUTING.md). This repository preserves historical source and adoption evidence.
+
+
 OpenBindings Design is a cross-surface authority. A change should name the
 class of decisions it governs and the consumers it is expected to affect.
 

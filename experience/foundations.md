@@ -1,5 +1,8 @@
 # OpenBindings interface foundations
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/experience/foundations.md). This repository preserves historical source and adoption evidence.
+
+
 Maturity: **stable**
 Foundations revision: **1**
 

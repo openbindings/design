@@ -1,5 +1,8 @@
 # Machine material and syntax
 
+> **Moved:** current OpenBindings design sources and guidance live in [openbindings/project/design](https://github.com/openbindings/project/blob/main/design/experience/machine-material.md). This repository preserves historical source and adoption evidence.
+
+
 Maturity: **stable**
 Machine-material revision: **1**
 
